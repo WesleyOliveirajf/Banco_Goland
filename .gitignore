@@ -6311,3 +6311,6 @@ gradle-app.setting
 result
 result-*
 
+# Projeto Go: manter o pacote de contas versionado.
+!/contas/
+!/contas/**
