@@ -6314,3 +6314,7 @@ result-*
 # Projeto Go: manter o pacote de contas versionado.
 !/contas/
 !/contas/**
+
+# Projeto Go: manter o pacote de clientes versionado.
+!/clientes/
+!/clientes/**

@@ -1,9 +1,11 @@
 package contas
 
+import "Banco/clientes"
+
 type ContaCorrente struct {
-	titular       string
-	numeroAgencia int
-	numeroConta   int
+	Titular       clientes.Titular
+	NumeroAgencia int
+	NumeroConta   int
 	saldo         float64
 }
 
@@ -25,7 +27,7 @@ func (c *ContaCorrente) Sacar(valorDoSaque float64) string {
 		c.saldo -= valorDoSaque
 		return "Saque realizado com sucesso"
 	} else {
-		return "Saldo insufuciente"
+		return "saldo insufuciente"
 	}
 }
 
@@ -37,4 +39,7 @@ func (c *ContaCorrente) Depositar(valorDoDeposito float64) (string, float64) {
 		return "deposito Nao Efetuado", c.saldo
 	}
 
+}
+func (c *ContaCorrente) ObterSaldo() float64 {
+	return c.saldo
 }
